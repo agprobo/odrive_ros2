@@ -33,12 +33,10 @@
 #include <fstream>
 
 
-#include "hardware_interface/base_interface.hpp"
 #include "hardware_interface/handle.hpp"
 #include "hardware_interface/hardware_info.hpp"
 #include "hardware_interface/system_interface.hpp"
 #include "hardware_interface/types/hardware_interface_return_values.hpp"
-#include "hardware_interface/types/hardware_interface_status_values.hpp"
 #include "rclcpp/macros.hpp"
 
 #include "agv_proto/odrive_endpoint.hpp"
@@ -56,8 +54,7 @@
 
 namespace agv_proto_hardware
 {
-class DiffBotSystemHardware
-: public hardware_interface::BaseInterface<hardware_interface::SystemInterface>
+class DiffBotSystemHardware : public hardware_interface::SystemInterface
 {
 public:
   RCLCPP_SHARED_PTR_DEFINITIONS(DiffBotSystemHardware);
